@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"https://lmsapp02.netlify.app",
+    origin:"https://lms-system-sdd8.onrender.com",
     credentials:true
 }));
  
@@ -34,7 +34,7 @@ app.use("/api/v1/course", courseRoute);
 app.use("/api/v1/purchase", purchaseRoute);
 app.use("/api/v1/progress", courseProgressRoute);
 
-app.use(express.static(path.join("_dirname","/client/dist")))
+app.use(express.static(path.join(_dirname,"/client/dist")))
 app.get("*",(_,res)=>{
     res.sendFile(path.resolve(_dirname,"client","dist","index.html"));
 })
