@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"https://lms-system-iaj8.onrender.com",
+    origin:"https://lmsapp02.netlify.app",
     credentials:true
 }));
  
